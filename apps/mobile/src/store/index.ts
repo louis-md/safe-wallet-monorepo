@@ -3,6 +3,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import { reduxStorage } from './storage'
 import txHistory from './txHistorySlice'
 import activeSafe from './activeSafeSlice'
+import signers from './signersSlice'
 import myAccounts from './myAccountsSlice'
 import safes from './safesSlice'
 import { cgwClient, setBaseUrl } from '@safe-global/store/gateway/cgwClient'
@@ -21,6 +22,7 @@ export const rootReducer = combineReducers({
   safes,
   activeSafe,
   myAccounts,
+  signers,
   [cgwClient.reducerPath]: cgwClient.reducer,
 })
 
